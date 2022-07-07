@@ -1,0 +1,32 @@
+.header {
+    height: 100px;
+    display: flex;
+    background-color: var(--cor-bg-dark);
+}
+
+.logo {
+    height: 100px;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    margin-left: 137px;
+}
+
+.nav-item {
+    font-family: 'Gilroy';
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 48px;
+    font-size: x-large;
+    color: white;
+}
+
+a.nav-item:hover {
+    text-decoration: underline var(--cor-bg-primary);
+}

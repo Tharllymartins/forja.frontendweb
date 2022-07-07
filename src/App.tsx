@@ -1,24 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Card } from './components/card/Card';
+import { Header } from './components/header/Header';
+import { MainBanner } from './components/mainBanner/MainBanner';
+import banner1 from "./static/img/banner.png";
+import banner2 from "./static/img/banner.jpg";
+
+const cards = [
+  {
+    name: "SSD 256gb"
+  },
+  {
+    name: "Carregador USB C"
+  },
+  {
+    name: "Fone de ouvido Eddifier"
+  }
+]
+
+const banners = [
+  {
+    img: banner1
+  },
+  {
+    img: banner2
+  }
+]
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+
+      <MainBanner img={banners[0].img}/>
+
+      <div className='cards'>
+        {cards.map(card => {
+          return <Card name={card.name} />
+        })}
+      </div>
+
     </div>
   );
 }
